@@ -2,5 +2,8 @@
 
 FactoryBot.define do
   factory :message do
+    # 対象factory名をアソシエーションに追加
+    association :user
+    content { Faker::Lorem.sentence }
   end
 end
