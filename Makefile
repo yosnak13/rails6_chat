@@ -39,3 +39,6 @@ run-backend:
 
 run-db:
 	docker compose run --rm db bash
+
+lint:
+	docker compose run --rm backend bundle exec rubocop -A
