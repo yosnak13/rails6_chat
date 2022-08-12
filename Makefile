@@ -42,6 +42,3 @@ run-db:
 
 lint:
 	docker compose exec backend bundle exec rubocop -A
-
-test:
-	docker compose exec backend bundle exec rspec
