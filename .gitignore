@@ -36,3 +36,4 @@ db
 
 # Ignore .idea-conf
 .idea
+rails6_chat.iml
