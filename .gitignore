@@ -34,6 +34,9 @@ db
 # Ignore .env
 .env
 
+# Ignore tmp
+tmp
+
 # Ignore .idea-conf
 .idea
 rails6_chat.iml
