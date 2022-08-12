@@ -30,9 +30,11 @@ frontend/.npm/_logs
 # Ignore db directory and db files in backend/db
 db
 !/backend/db
+tmp
 
 # Ignore .env
 .env
 
 # Ignore .idea-conf
 .idea
+rails6_chat.iml
