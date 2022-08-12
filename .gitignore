@@ -34,5 +34,5 @@ db
 # Ignore .env
 .env
 
-tmp
+# Ignore .idea-conf
 .idea
