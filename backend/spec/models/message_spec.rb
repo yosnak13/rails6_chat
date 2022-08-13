@@ -11,9 +11,9 @@ RSpec.describe Message, type: :model do
       end
     end
 
-    context "入力値が不正な場合" do
-      let(:invalid) { build(:message, content: "") }
-      it "エラーになること" do
+    context '入力値が不正な場合' do
+      let(:invalid) { build(:message, content: '') }
+      it 'エラーになること' do
         expect(invalid).not_to be_valid
       end
     end
