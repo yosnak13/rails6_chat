@@ -7,7 +7,12 @@ RSpec.describe Message, type: :model do
     context '入力値が正しい場合' do
       let(:expected) { build(:message) }
       it 'バリデーションを通過すること' do
+        messaged_user = expected.user
+
         expect(expected).to be_valid
+        expect(messaged_user).to be_present
+        expect(messaged_user.name).to be_present
+        expect(messaged_user.email).to be_present
       end
     end
 
