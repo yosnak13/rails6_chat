@@ -24,17 +24,7 @@ Metrics/PerceivedComplexity:
 # Offense count: 7
 # Configuration parameters: AllowedConstants.
 Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/controllers/auth/registrations_controller.rb'
-    - 'app/models/application_record.rb'
-    - 'config/application.rb'
-    - 'db/migrate/20220812010516_devise_token_auth_create_users.rb'
-    - 'db/migrate/20220812132312_create_messages.rb'
-    - 'production/rails6_chat/app/models/application_record.rb'
-    - 'production/rails6_chat/config/application.rb'
-
+  Enabled: false
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/IfUnlessModifier:

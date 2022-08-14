@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :user do
-    id { rand(1) }
+    id { 1 }
     name { Faker::Name.name }
     email { Faker::Internet.email }
     password { 'password' }

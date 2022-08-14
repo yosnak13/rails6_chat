@@ -22,7 +22,7 @@ RSpec.describe 'Messages', type: :request do
       it 'httpステータスが401になること' do
         get messages_path
         expect(response).to have_http_status(401)
-        expect(response.body).to include("unauthenticated")
+        expect(response.body).to include('unauthenticated')
       end
     end
   end
