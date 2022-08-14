@@ -43,5 +43,6 @@ module Rails6ChatBe
       g.helper false
       g.test_framework :rspec
     end
+    Faker::Config.locale = :ja
   end
 end
