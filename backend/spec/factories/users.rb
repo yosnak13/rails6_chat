@@ -5,13 +5,13 @@ FactoryBot.define do
     id { 1 }
     name { Faker::Name.name }
     email { Faker::Internet.email }
-    password { 'password' }
-    password_confirmation { 'password' }
+    password { "password" }
+    password_confirmation { "password" }
   end
 
-  factory :messaged_user, class: 'User' do
+  factory :messaged_user, class: "User" do
     id { rand(1..5) }
-    name { 'poseted_user' }
-    email { 'posted@example.com' }
+    name { "poseted_user" }
+    email { "posted@example.com" }
   end
 end
