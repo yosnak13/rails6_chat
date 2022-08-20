@@ -7,8 +7,8 @@ RSpec.describe 'Messages', type: :request do
     let!(:user) { create(:user) }
 
     def auth_headers
-      post '/auth/sign_in', params: {email: user['email'], password: 'password'}
-      { 'uid'=>response.header['uid'], 'client'=>response.header['client'], 'access-token'=>response.header['access-token'] }
+      post '/auth/sign_in', params: { email: user['email'], password: 'password' }
+      { 'uid' => response.header['uid'], 'client' => response.header['client'], 'access-token' => response.header['access-token'] }
     end
 
     context 'getリクエストが正しいとき' do
