@@ -38,3 +38,11 @@ Style/IfUnlessModifier:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 198
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
