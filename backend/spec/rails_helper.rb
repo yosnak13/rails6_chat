@@ -66,8 +66,12 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.include Devise::Test::IntegrationHelpers, type: :request
 
+  # config about database_cleaner
   config.before(:suite) do
+    # DatabaseCleaner.startからcleanを実行するまでのデータ操作方法を決める
+    # TRUNCATE TABLE文を実行する
     DatabaseCleaner.strategy = :truncation
+    # truncate table文を実行し、レコードを消す
     DatabaseCleaner.clean_with(:truncation)
   end
 
