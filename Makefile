@@ -1,5 +1,28 @@
+# docker container/image
+build:
+	docker compose build
+
+build-nc:
+	docker compose build --no-cache
+
+up:
+	docker compose up -d
+
+stop:
+	docker compose stop
+
+down:
+	docker compose down
+
+# Backend
+exec-be:
+	docker compose exec backend bash
+
+run-be:
+	docker compose run --rm backend bash
+
 bundle-install:
-	docker-compose run --rm backend bundle install --without production
+	docker compose run --rm backend bundle install --without production
 
 bundle-update:
 	docker compose run --rm backend bundle update
@@ -13,32 +36,18 @@ precompile:
 test:
 	docker compose run --rm backend bundle exec rspec
 
-build:
-	docker compose build
+lint:
+	docker compose run --rm backend bundle exec rubocop -a
 
-build-nc:
-	docker compose build --no-cache
+bp: test lint
 
-down:
-	docker compose down
+# about frontend
+exec-fe:
+	docker compose exec frontend sh
 
-up:
-	docker compose up -d
-
-stop:
-	docker compose stop
-
-exec-backend:
-	docker compose exec backend bash
-
-exec-db:
-	docker compose exec db bash
-
-run-backend:
-	docker compose run --rm backend bash
-
+# about db
 run-db:
 	docker compose run --rm db bash
 
-lint:
-	docker compose run --rm backend bundle exec rubocop -A
+exec-db:
+	docker compose exec db bash
