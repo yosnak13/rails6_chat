@@ -14,7 +14,7 @@ Metrics/CyclomaticComplexity:
 # Offense count: 5
 # Configuration parameters: CountComments, CountAsOne, ExcludedMethods, AllowedMethods, AllowedPatterns, IgnoredMethods.
 Metrics/MethodLength:
-  Max: 12
+  Max: 20
 
 # Offense count: 2
 # Configuration parameters: AllowedMethods, AllowedPatterns, IgnoredMethods.
@@ -47,3 +47,7 @@ Metrics/BlockLength:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
+
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or a Float.
+  Max: 20
