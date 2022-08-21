@@ -42,6 +42,7 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+    - 'db/**/*'
 
 Style/StringLiterals:
   Enabled: true

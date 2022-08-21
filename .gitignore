@@ -25,6 +25,7 @@ backend/config/master.key
 # Ignore other files for development
 .bash_history
 .irb_history
+.DS_Store
 frontend/.npm/_logs
 
 # Ignore db directory and db files in backend/db
