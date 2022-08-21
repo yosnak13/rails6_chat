@@ -29,6 +29,20 @@ services:
     tty: true
     stdin_open: true
 
+  frontend:
+    build:
+      context: .
+      dockerfile: docker_files/frontend/Dockerfile
+    volumes:
+      - ./frontend:/rails6-chat-fe
+    ports:
+      - '8080:8080'
+    depends_on:
+      - backend
+    tty: true
+    stdin_open: true
+    command: npm run serve
+
 volumes:
   gem_data:
   mysql-data:

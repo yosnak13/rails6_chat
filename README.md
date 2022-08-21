@@ -1,7 +1,8 @@
 ## 起動コマンド
-
 ```
-$ docker compose run --no-deps backend rails new . --force --skip-turbolinks --skip-test --database=mysql --api
-$ docker compose build
-$ docker compose up -d
+$ git clone https://github.com/yosnak13/rails6_chat
+$ docker-compose run -- rm frontend npm install
+$ docker-compoe run --rm backend rails db:create
+$ docker-compoe run --rm backend rails db:migrate
+$ docker-compose up
 ```
